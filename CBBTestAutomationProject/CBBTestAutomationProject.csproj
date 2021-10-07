@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\LoginAndAuthenticationOfACirrusConfigAnalyst.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Remove="Features\LoginAndAuthenticationOfACirrusConfigAnalyst.feature" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\EditLogicinRuleManagementCoins - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\EditLogicinRuleManagementExternalId - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\EditLogicinRuleManagementPlanPeriod - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\EditLogicinRuleManagementPlanSettings - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\EditLogicinRuleManagementPlanTier - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="91.0.4472.10100" />
+
+    
+
+    
+
+    
+    <PackageReference Include="SpecFlow.NUnit" Version="3.8.14" />
+    <PackageReference Include="nunit" Version="3.13.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    
+
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Drivers\" />
+    <Folder Include="Hooks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\EditLogicinRuleManagementCopay.feature.cs">
+      <DependentUpon>EditLogicinRuleManagementCopay.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\EditLogicinRuleManagementCoins.feature.cs">
+      <DependentUpon>EditLogicinRuleManagementCoins.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\EditLogicinRuleManagementExternalId.feature.cs">
+      <DependentUpon>EditLogicinRuleManagementExternalId.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\EditLogicinRuleManagementPlanTier.feature.cs">
+      <DependentUpon>EditLogicinRuleManagementPlanTier.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\EditLogicinRuleManagementPlanSettings.feature.cs">
+      <DependentUpon>EditLogicinRuleManagementPlanSettings.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\EditLogicinRuleManagementCopay.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\EditLogicinRuleManagementCoins.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\EditLogicinRuleManagementExternalId.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\EditLogicinRuleManagementPlanTier.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\EditLogicinRuleManagementPlanSettings.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+</Project>
