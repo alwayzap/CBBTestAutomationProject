@@ -25,6 +25,7 @@ namespace CBBTestAutomationProject.Steps
             string user = GivenThatIAmCirrusConfigurationAnalyst().ToString();
             string[] array = new string[] { "1", "4", "6" };
             driver.Manage().Cookies.DeleteAllCookies();
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             Assert.AreEqual(user, driver.FindElement(By.Id("hfCurrentUserID")).GetAttribute("value"));
             Assert.IsTrue(array.Contains(driver.FindElement(By.Id("hfCurrentRoleID")).GetAttribute("value")));

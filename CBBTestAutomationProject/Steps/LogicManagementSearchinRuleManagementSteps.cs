@@ -15,6 +15,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I click on the Rule Management button in the Home page")]
         public void WhenIClickOnTheRuleManagementButtonInTheHomePage()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkRuleMgmt")).Click();
         }
