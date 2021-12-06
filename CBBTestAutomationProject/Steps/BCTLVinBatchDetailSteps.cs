@@ -20,6 +20,7 @@ namespace CBBTestAutomationProject.Steps
         [Then(@"the plan\(s\) should be added to the batch processing queue")]
         public void ThenThePlanSShouldBeAddedToTheBatchProcessingQueue()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBatchInspector")).Click();
             Assert.AreEqual(driver.Url, "https://cbb-dev.uhc.com/BatchOverview.aspx");

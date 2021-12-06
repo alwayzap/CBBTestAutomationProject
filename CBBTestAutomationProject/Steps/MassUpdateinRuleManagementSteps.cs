@@ -15,7 +15,8 @@ namespace CBBTestAutomationProject.Features
         [When(@"I Edit an Existing Rule for Data Pointer and Change Logic")]
         public void WhenIEditAnExistingRuleForDataPointerAndChangeLogic()
         {
-           // code to edit a rule and change logic
+            // code to edit a rule and change logic
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkRuleMgmt")).Click();
             SelectElement s = new SelectElement(driver.FindElement(By.Id("ddlDocType")));

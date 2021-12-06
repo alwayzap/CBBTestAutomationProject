@@ -15,6 +15,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I am on the CBBBenefitMgmt page")]
         public void WhenIAmOnTheCBBBenefitMgmtPage()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBenefitStateMgmt")).Click();
         }

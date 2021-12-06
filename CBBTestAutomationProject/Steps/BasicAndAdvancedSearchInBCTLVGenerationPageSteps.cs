@@ -25,6 +25,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I enter a Valid Plan Code on the Standard Search tab")]
         public void WhenIEnterAValidPlanCodeOnTheStandardSearchTab()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBctlvGnrtn")).Click();
             Assert.AreEqual(driver.Url, "https://cbb-dev.uhc.com/BCTLVGeneration.aspx");
@@ -35,6 +36,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I enter an Invalid Plan Code on the Standard Search tab")]
         public void WhenIEnterAnInValidPlanCodeOnTheStandardSearchTab()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBctlvGnrtn")).Click();
             Assert.AreEqual(driver.Url, "https://cbb-dev.uhc.com/BCTLVGeneration.aspx");
@@ -73,6 +75,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I enter a Valid DBS ID, Group Number, or Created By on the Advanced Search tab")]
         public void WhenIEnterAValidDBSIDGroupNumberOrCreatedByOnTheAdvancedSearchTab()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBctlvGnrtn")).Click();
             Assert.AreEqual(driver.Url, "https://cbb-dev.uhc.com/BCTLVGeneration.aspx");
@@ -88,6 +91,7 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I enter an Invalid DBS ID, Group Number, or Created By on the Advanced Search tab")]
         public void WhenIEnterAnInvalidDBSIDGroupNumberOrCreatedByOnTheAdvancedSearchTab()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkBctlvGnrtn")).Click();
             Assert.AreEqual(driver.Url, "https://cbb-dev.uhc.com/BCTLVGeneration.aspx");

@@ -16,6 +16,7 @@ namespace CBBTestAutomationProject.Steps
         [Given(@"I'm on the Home page")]
         public void GivenIMOnTheHomePage()
         {
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
         }
         
