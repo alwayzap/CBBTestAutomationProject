@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using System.Linq;
 using NUnit.Framework;
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace CBBTestAutomationProject.Steps
 {
@@ -36,7 +37,9 @@ namespace CBBTestAutomationProject.Steps
         [When(@"I’ve clicked the Generate BCTLV button")]
         public void WhenIVeClickedTheGenerateBCTLVButton()
         {
-            p.plan.driver.FindElement(By.Id("btnStdGenerateBCTLV")).Click();
+ //Changed the code to match the dropdown after adding Plan generation by algorithm. select value 1 for Rule based. Select 2 for Algorithm based.
+            SelectElement se = new SelectElement(p.plan.driver.FindElement(By.Id("ddlStdGenerate")));
+            se.SelectByValue("1");
             p.plan.driver.FindElement(By.Id("btnLGConfirm")).Click();
         }
 

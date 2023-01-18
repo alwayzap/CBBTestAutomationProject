@@ -16,7 +16,7 @@ namespace CBBTestAutomationProject.Steps
         public int GivenThatIAmCirrusConfigurationAnalyst()
         {
             CirrusConfigAnalyst analyst = new CirrusConfigAnalyst();
-            return (int)analyst.GetQueryResult("Persist Security Info=False;Integrated Security=true;Initial Catalog=cirrusPlanBuilder;Server=DBVED40846", "SELECT U.UserID FROM Users U where U.Username like SUBSTRING(USER,4,20);").Rows[0].ItemArray.GetValue(0);
+            return (int)analyst.GetQueryResult("Persist Security Info=False;Integrated Security=true;Initial Catalog=cirrusPlanBuilder;Server=wn000060468", "SELECT U.UserID FROM Users U where U.Username like SUBSTRING(USER,4,20);").Rows[0].ItemArray.GetValue(0);
         }
         
         [Given(@"I have successfully authenticated into CBB web app")]

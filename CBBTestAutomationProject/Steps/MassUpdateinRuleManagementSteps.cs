@@ -19,13 +19,12 @@ namespace CBBTestAutomationProject.Features
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://cbb-dev.uhc.com");
             driver.FindElement(By.Id("MainContent_lnkRuleMgmt")).Click();
-            SelectElement s = new SelectElement(driver.FindElement(By.Id("ddlDocType")));
+            SelectElement s = new SelectElement(driver.FindElement(By.Id("ddlState")));
             s.SelectByValue("10");
             Thread.Sleep(1000);
             driver.FindElements(By.CssSelector("a[data-original-title=\"Edit\"]"))[0].Click();//In Rule Management page
             Thread.Sleep(1000);
-            driver.FindElements(By.CssSelector("a[data-original-title=\"Edit\"]"))[0].Click();//When a specific rule is edited
-            Assert.IsTrue(driver.Url.Contains("https://cbb-dev.uhc.com/LogicMgmtEdit?"));
+            Assert.IsTrue(driver.Url.Contains("https://cbb-dev.uhc.com/LogicMgmt2.aspx?"));
             driver.FindElement(By.Id("tabDetails")).Click();
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             if (driver.FindElement(By.Id("chkSE")).Selected)
@@ -56,6 +55,7 @@ namespace CBBTestAutomationProject.Features
         public void ThenLogicIsUpdatedInSelectedRules()
         {
             //ScenarioContext.Current.Pending();
+            driver.Quit();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace CBBTestAutomationProject.Steps
             driver.FindElement(By.Id("lnkTiers")).Click();//When Tiers tab is clicked
             driver.FindElement(By.Id("MainContent_gvTiers_lnkEditTier_0")).Click();//When a specific rule is edited
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-            IWebElement SearchResult = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("tierNetworkLabel")));
+            IWebElement SearchResult = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("MainContent_txtTNtierNumber")));
             Assert.IsTrue(SearchResult.Displayed);
         }
         

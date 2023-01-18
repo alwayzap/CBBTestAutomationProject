@@ -15,7 +15,7 @@ namespace CBBTestAutomationProject.Steps
         public IWebDriver driver = new ChromeDriver();
         string validplancode = "BHNQ";
         string invalidplancode = "000000";
-        string validdbsid = "52289";
+        string validdbsid = "52291";
         string invaliddbsid = "000000";
         string validcreatedby = "mmiley10";
         string invalidcreatedby = "invalid1";
@@ -129,7 +129,7 @@ namespace CBBTestAutomationProject.Steps
             }
             else if ((driver.FindElement(By.CssSelector("a[id=\"lnkAdvcSearch\"]")).Displayed))
             {
-                Assert.AreEqual(analyst.GetQueryResult("Persist Security Info=False;Integrated Security=true;Initial Catalog=DBS;Server=DBVED39544", "SELECT digital_benefitid ,plan_code FROM dbo.digitalbenefit join Users ON Users.userID = dbo.digitalbenefit.userid where digital_benefitid =" + validdbsid + "and Users.userName ='" + validcreatedby + "' and customer_policy_number ='" + validgroupnumber + "';").Rows[0].ItemArray.GetValue(1).ToString(), driver.FindElement(By.Id("gvBCTLVGen")).FindElements(By.TagName("td")).ElementAt(1).Text);
+                Assert.AreEqual(analyst.GetQueryResult("Persist Security Info=False;Integrated Security=true;Initial Catalog=DBS;Server=DBVED39544", "SELECT digital_benefitid ,plan_code FROM dbo.digitalbenefit join Users ON Users.userID = dbo.digitalbenefit.userid where digital_benefitid =" + validdbsid + "and Users.userName ='" + validcreatedby + "' and customer_policy_number ='" + validgroupnumber + "';").Rows[0].ItemArray.GetValue(1).ToString(), driver.FindElement(By.Id("gvBCTLVGen")).FindElements(By.TagName("td")).ElementAt(2).Text);
             }
             driver.Close();
         }
